@@ -1,5 +1,9 @@
 from fastapi import FastAPI, status
 
+from database import Base, engine
+
+Base.metadata.create_all(engine)
+
 app_name = "quote"
 
 app = FastAPI()
