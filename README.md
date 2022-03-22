@@ -26,18 +26,16 @@ source <path to venv>/bin/activate
 pip install -r requirements.txt
 ```
 
-## Contributing
-
-### Initialize pre-commit
-`pre-commit` is used to format commits according to our coding standards. Initializing it here will install hook scripts into your local git repo.
+### To run App
 ```
-pre-commit install
+uvicorn main:app --host 0.0.0.0 --port 80
 ```
+Add the `--reload` option if you wish for it to reload with every file change.
 
-## Quotes REST API details
+#### API Documentation
+You can view a full documentation (OpenAPI Standard) of the app by viewing http://127.0.0.1/docs
 
 The API supports the following requests:
-
 -   Create quote
 
     -   Method: POST
@@ -92,3 +90,11 @@ The API supports the following requests:
         -   200: Quote deleted successfully
         -   404: Quote does not exist
         -   500: Error deleting quote
+
+## Contributing
+
+### Initialize pre-commit
+`pre-commit` is used to format commits according to our coding standards. Initializing it here will install hook scripts into your local git repo.
+```
+pre-commit install
+```
