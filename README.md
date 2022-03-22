@@ -33,11 +33,10 @@ uvicorn main:app --host 0.0.0.0 --port 80
 Add the `--reload` option if you wish for it to reload with every file change.
 
 #### API Documentation
-You can view a full documentation (OpenAPI Standard) of the app by viewing http://127.0.0.1/docs
+You can view a full documentation (OpenAPI Standard) of the app by viewing http://127.0.0.1/docs once running the app.
 
 The API supports the following requests:
 -   Create quote
-
     -   Method: POST
     -   URL: /api/quote
     -   Parameters:
@@ -45,51 +44,45 @@ The API supports the following requests:
         -   author_name: Person who the quote belongs to (ex: 'Morgan Freeman') (required)
     -   Responses:
         -   201: Quote created successfully
-            -   quote: holding values of the quote
-        -   409: Error registering quote
+
 
 -   Get a list of all the quotes
-
     -   Method: GET
-    -   URL: /api/quotes
+    -   URL: /api/quote
     -   Responses:
         -   200: Get all quotes successfully
-            -   quotes: holding an array of all the quotes
-        -   500: Error getting quotes
+
 
 -   Read details of a quote
-
     -   Method: GET
-    -   URL: /api/quote/details/{id}
+    -   URL: /api/quote/{id}
     -   {id}: The id of the quote in question
     -   Responses:
         -   200: Got quote successfully
-            -   quote: holding details of the quote
         -   404: Quote does not exist
-        -   500: Error getting quote
+
 
 -   Update details of a quote
 
     -   Method: PUT
-    -   URL: /api/quote/update/{id}
+    -   URL: /api/quote/{id}
     -   {id}: The id of the quote in question
     -   Parameters:
-        -   quote: Quote in quection (ex: 'Live life')(required if author_name not given)
+        -   quote: Quote in question (ex: 'Live life')(required if author_name not given)
         -   author_name: Person who the quote belongs to (ex: 'Morgan Freeman') (required if quote not given)
     -   Responses:
         -   200: Quote updated successfully
             -   quote: holding details of the quote now updated
         -   404: Quote does not exist
-        -   409: Error updatting quote
+
 
 -   Delete a quote
     -   Method: DELETE
-    -   URL: /api/quote/delete/{id}
+    -   URL: /api/quote/{id}
     -   {id}: The id of the quote in question
     -   Responses:
         -   200: Quote deleted successfully
         -   404: Quote does not exist
-        -   500: Error deleting quote
 
 ## Contributing
 
