@@ -1,7 +1,7 @@
-fastapi~=0.75.0
-uvicorn==0.17.6
 SQLAlchemy==1.4.32
-requests==2.27.1
-starlette~=0.17.1
+fastapi~=0.75.0
 pydantic~=1.9.0
 pytest==7.1.1
+requests==2.27.1
+starlette~=0.17.1
+uvicorn==0.17.6
