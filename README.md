@@ -26,6 +26,14 @@ source <path to venv>/bin/activate
 pip install -r requirements.txt
 ```
 
+## Contributing
+
+### Initialize pre-commit
+`pre-commit` is used to format commits according to our coding standards. Initializing it here will install hook scripts into your local git repo.
+```
+pre-commit install
+```
+
 ## Quotes REST API details
 
 The API supports the following requests:
@@ -84,4 +92,3 @@ The API supports the following requests:
         -   200: Quote deleted successfully
         -   404: Quote does not exist
         -   500: Error deleting quote
-
